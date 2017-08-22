@@ -61,8 +61,10 @@ jQuery(document).ready(function($) {
         } else if (flakeColor == 3) {
             bcolor = "#27a9d6"
         } else if (flakeColor == 4) {
-            bcolor = "#b03939"
+            bcolor = "#24292e"
         } else if (flakeColor == 5) {
+            bcolor = "#007eae"
+        } else if (flakeColor == 6) {
             bcolor = "#007eae"
         };
         $('#sub-menu li').css({
@@ -72,7 +74,8 @@ jQuery(document).ready(function($) {
         $(this).stop().animate({
                 'top': '-10px',
             },
-            500, function() {
+            500,
+            function() {
                 $('#num2,#footpor').animate({
                     'background-color': bcolor
                 }, 500);
@@ -85,7 +88,8 @@ jQuery(document).ready(function($) {
         $(this).stop().animate({
                 'top': '0px'
             },
-            100, function() {
+            100,
+            function() {
                 $('#num2,#footpor').animate({
                     'background-color': '#10a8ae'
                 }, 500);
@@ -137,7 +141,7 @@ function Flake() {
 }
 
 function init(bodyw) {
-    canvas = document.getElementById('testCanvas');
+    canvas = document.getElementById('snowCanvas');
     context = canvas.getContext("2d");
     canvas.width = bodyw;
     bufferCanvas = document.createElement("canvas");
@@ -219,7 +223,7 @@ function Draw() {
             textfill = '\uF09a';
         } else if (flakeColor == 3) {
             bufferCanvasCtx.fillStyle = "#1cc5ff"
-            textfill = '\uF099';
+            textfill = '\uf092';
         } else if (flakeColor == 4) {
             bufferCanvasCtx.fillStyle = "#d34435"
             textfill = '\uF0d5';
